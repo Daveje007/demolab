@@ -17,3 +17,4 @@ spec:
         image: daveje007/k8-nginx2
         ports:
         - containerPort: 80
+# end of file
