@@ -1,0 +1,13 @@
+---
+- hosts: node9
+  tasks:
+    - name: restart nginx
+      service: name=nginx enabled=yes state=stopped
+    - lineinfile:
+        path : /usr/share/nginx/html/index.html
+        line: 'this is the homepage fopr the k8 implementation at IAC SSC'
+        line: 'for more information use http://www.kubernetes.io'
+
+    - name: start nginx
+      service: name=nginx enabled=yes state=started
+...
