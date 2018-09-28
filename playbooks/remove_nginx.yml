@@ -1,0 +1,8 @@
+---
+- hosts: node9
+  tasks:
+    - name: install nginx
+      yum: 
+        name: nginx
+        state: removed
+...

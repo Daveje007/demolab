@@ -1,0 +1,10 @@
+---
+- hosts: node9
+  tasks:
+    - name: install nginx
+      yum:
+        name: nginx
+        state: latest
+    - name: start nginx
+      service: name=nginx enabled=yes state=started
+...
