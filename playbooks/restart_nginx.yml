@@ -2,5 +2,5 @@
 - hosts: node9
   tasks:
     - name: restart nginx
-      service: name=nginx enabled=yes state=reloaded
+      service: name=nginx enabled=yes state=reloaded # hope it works
 ...
