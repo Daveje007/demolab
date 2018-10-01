@@ -1,8 +1,8 @@
 ---
-- hosts: node9
+- hosts: node9 node8
   tasks:
     - name: install nginx
-      yum: 
+      yum:
         name: nginx
         state: removed
 ...
