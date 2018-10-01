@@ -1,5 +1,5 @@
 ---
-- hosts: node9
+- hosts: node8
   tasks:
     - name: restart nginx
       service: name=nginx enabled=yes state=stopped

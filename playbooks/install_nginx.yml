@@ -2,7 +2,7 @@
 - hosts: node8
   tasks:
     - name: add repository nginx-release
-      yum: name="http://nginx.org/packages/rhel/7/$basearch/"
+      yum: name="http://nginx.org/packages/mainline/rhel/7/x86_64/RPMS/nginx-1.15.4-1.el7_4.ngx.x86_64.rpm"
     - name: install nginx
       yum:
         name: nginx
