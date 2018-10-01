@@ -1,6 +1,8 @@
 ---
-- hosts: node9
+- hosts: node8
   tasks:
+    - name: add repository nginx-release
+      yum: name="http://nginx.org/packages/rhel/7/$basearch/"
     - name: install nginx
       yum:
         name: nginx
