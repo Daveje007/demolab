@@ -16,5 +16,5 @@ spec:
       - name: dave-nginx
         image: daveje007/k8-nginx2
         ports:
-        - containerPort: 80
+        - containerPort: 80 # setting ports
 # end of file
