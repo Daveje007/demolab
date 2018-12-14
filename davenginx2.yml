@@ -1,0 +1,26 @@
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+kind: Deployment
+metadata:
+  name: dave-nginx
+spec:
+  selector:
+    matchLabels:
+      app: dave-nginx
+  replicas: 3 # tells deployment to run 2 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: dave-nginx
+    spec:
+      containers:
+      - name: dave-nginx
+        image: daveje007/k8-nginx2
+        ports:
+        - containerPort: 80
+        volumeMounts:
+            - name: nfs
+              mountPath: "/usr/share/nginx/html"
+      volumes:
+      - name: nfs
+        persistentVolumeClaim:
+          claimName: nfs
