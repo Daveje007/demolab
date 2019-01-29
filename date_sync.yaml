@@ -1,0 +1,7 @@
+- hosts: node7 node8 node9
+  tasks:
+    - name: stop ntpd
+      service: name=ntpd enabled=yes state=stopped
+
+    - name: start ntpd
+      service: name=ntpd enabled=yes state=started
