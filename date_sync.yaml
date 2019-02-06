@@ -1,7 +1,19 @@
-- hosts: node7 node8 node9
+- hosts: kubernetes
   tasks:
     - name: stop ntpd
-      service: name=ntpd enabled=yes state=stopped
+      service:
+        name=ntpd
+        enabled=yes
+        state=stopped
 
     - name: start ntpd
-      service: name=ntpd enabled=yes state=started
+      service:
+        name=ntpd
+        enabled=yes
+        state=started
+
+    - name: Is NTP started
+      service:
+        name=ntpd
+        enabled=yes
+        state=status
