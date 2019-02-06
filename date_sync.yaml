@@ -1,4 +1,3 @@
----
 - hosts: kubernetes
   tasks:
     - name: stop ntpd
@@ -12,4 +11,3 @@
         name=ntpd
         enabled=yes
         state=started
-....
