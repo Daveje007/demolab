@@ -1,4 +1,4 @@
-- hosts: kubernetes
+- hosts: all
   tasks:
     - name: stop ntpd
       service:
